@@ -24,9 +24,9 @@ RUN apt-get update \
 SHELL ["/bin/bash", "-c"]
 
 RUN mkdir -p ~/ros2_ws/src \
-    && cd ~/ros2_ws/src
-COPY . .
-RUN cd .. \
+    && cd ~/ros2_ws/src/ \
+    && git clone https://github.com/ceugomez/liosam-onboard.git \
+    && cd .. \
     && source /opt/ros/humble/setup.bash \
     && colcon build
 
