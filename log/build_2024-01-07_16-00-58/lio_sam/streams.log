@@ -1,0 +1,594 @@
+[0.025s] Invoking command in '/home/ceu/Desktop/LIO-SAM/build/lio_sam': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/ceu/Desktop/LIO-SAM -DCMAKE_INSTALL_PREFIX=/home/ceu/Desktop/LIO-SAM/install/lio_sam
+[0.059s] -- The C compiler identification is GNU 9.4.0
+[0.092s] -- The CXX compiler identification is GNU 9.4.0
+[0.095s] -- Check for working C compiler: /usr/bin/cc
+[0.141s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.141s] -- Detecting C compiler ABI info
+[0.198s] -- Detecting C compiler ABI info - done
+[0.205s] -- Detecting C compile features
+[0.205s] -- Detecting C compile features - done
+[0.207s] -- Check for working CXX compiler: /usr/bin/c++
+[0.260s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.260s] -- Detecting CXX compiler ABI info
+[0.313s] -- Detecting CXX compiler ABI info - done
+[0.321s] -- Detecting CXX compile features
+[0.321s] -- Detecting CXX compile features - done
+[0.322s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.339s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.339s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.460s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.462s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.466s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.527s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.546s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.598s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.615s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.654s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.655s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.656s] -- Looking for pthread.h
+[0.710s] -- Looking for pthread.h - found
+[0.710s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.759s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.759s] -- Looking for pthread_create in pthreads
+[0.805s] -- Looking for pthread_create in pthreads - not found
+[0.806s] -- Looking for pthread_create in pthread
+[0.857s] -- Looking for pthread_create in pthread - found
+[0.858s] -- Found Threads: TRUE  
+[0.962s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[0.963s] -- Found cv_bridge: 3.0.7 (/opt/ros/foxy/share/cv_bridge/cmake)
+[1.066s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.117s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[1.169s] -- Found pcl_msgs: 1.0.0 (/opt/ros/foxy/share/pcl_msgs/cmake)
+[1.253s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[1.260s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[1.266s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[1.268s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[1.535s] -- Found tf2_sensor_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_sensor_msgs/cmake)
+[1.547s] -- Found tf2_eigen: 0.13.14 (/opt/ros/foxy/share/tf2_eigen/cmake)
+[1.552s] -- Found OpenCV: /usr (found version "4.2.0") 
+[1.561s] -- Checking for module 'eigen3'
+[1.570s] --   Found eigen3, version 3.3.7
+[1.593s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[1.593s] -- Eigen found (include: /usr/include/eigen3, version: 3.3.7)
+[1.622s] -- Found Boost: /usr/include (found suitable version "1.71.0", minimum required is "1.55.0") found components: system filesystem date_time iostreams regex 
+[1.633s] -- Checking for module 'flann'
+[1.642s] --   Found flann, version 1.9.1
+[1.668s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[1.705s] -- The imported target "vtkParseOGLExt" references the file
+[1.705s]    "/usr/bin/vtkParseOGLExt-7.1"
+[1.706s] but this file does not exist.  Possible reasons include:
+[1.706s] * The file was deleted, renamed, or moved to another location.
+[1.706s] * An install or uninstall procedure did not complete successfully.
+[1.706s] * The installation package was faulty and contained
+[1.706s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[1.706s] but not all the files it references.
+[1.706s] 
+[1.706s] -- The imported target "vtkRenderingPythonTkWidgets" references the file
+[1.706s]    "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"
+[1.706s] but this file does not exist.  Possible reasons include:
+[1.706s] * The file was deleted, renamed, or moved to another location.
+[1.706s] * An install or uninstall procedure did not complete successfully.
+[1.706s] * The installation package was faulty and contained
+[1.706s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[1.706s] but not all the files it references.
+[1.706s] 
+[1.707s] -- The imported target "vtk" references the file
+[1.707s]    "/usr/bin/vtk"
+[1.707s] but this file does not exist.  Possible reasons include:
+[1.707s] * The file was deleted, renamed, or moved to another location.
+[1.707s] * An install or uninstall procedure did not complete successfully.
+[1.707s] * The installation package was faulty and contained
+[1.707s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[1.707s] but not all the files it references.
+[1.707s] 
+[1.707s] -- The imported target "pvtk" references the file
+[1.707s]    "/usr/bin/pvtk"
+[1.707s] but this file does not exist.  Possible reasons include:
+[1.707s] * The file was deleted, renamed, or moved to another location.
+[1.707s] * An install or uninstall procedure did not complete successfully.
+[1.707s] * The installation package was faulty and contained
+[1.707s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[1.707s] but not all the files it references.
+[1.707s] 
+[1.719s] -- Checking for module 'libusb-1.0'
+[1.729s] --   Found libusb-1.0, version 1.0.23
+[1.754s] -- Found USB_10: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[1.796s] -- Found OpenNI: /usr/lib/libOpenNI.so  
+[1.796s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[1.823s] -- Found OpenNI2: /usr/lib/libOpenNI2.so  
+[1.823s] -- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+[1.823s] ** WARNING ** io features related to pcap will be disabled
+[1.823s] ** WARNING ** io features related to png will be disabled
+[1.832s] ** WARNING ** io features related to libusb-1.0 will be disabled
+[1.832s] -- Found libusb-1.0: /usr/include  
+[1.837s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[1.841s] -- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+[1.858s] -- Found Qhull: optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so  
+[1.858s] -- QHULL found (include: /usr/include, lib: optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so)
+[1.862s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[1.870s] -- looking for PCL_COMMON
+[1.871s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[1.871s] -- looking for PCL_KDTREE
+[1.872s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[1.872s] -- looking for PCL_OCTREE
+[1.872s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[1.873s] -- looking for PCL_SEARCH
+[1.873s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[1.873s] -- looking for PCL_SAMPLE_CONSENSUS
+[1.874s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[1.874s] -- looking for PCL_FILTERS
+[1.875s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[1.875s] -- looking for PCL_2D
+[1.875s] -- Found PCL_2D: /usr/include/pcl-1.10  
+[1.875s] -- looking for PCL_GEOMETRY
+[1.875s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.10  
+[1.876s] -- looking for PCL_IO
+[1.876s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[1.876s] -- looking for PCL_FEATURES
+[1.877s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[1.877s] -- looking for PCL_ML
+[1.878s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[1.878s] -- looking for PCL_SEGMENTATION
+[1.879s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[1.879s] -- looking for PCL_VISUALIZATION
+[1.880s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[1.880s] -- looking for PCL_SURFACE
+[1.881s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[1.881s] -- looking for PCL_REGISTRATION
+[1.882s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[1.882s] -- looking for PCL_KEYPOINTS
+[1.883s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[1.883s] -- looking for PCL_TRACKING
+[1.884s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[1.884s] -- looking for PCL_RECOGNITION
+[1.885s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[1.885s] -- looking for PCL_STEREO
+[1.886s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[1.886s] -- looking for PCL_APPS
+[1.887s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[1.887s] -- looking for PCL_IN_HAND_SCANNER
+[1.888s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.10  
+[1.888s] -- looking for PCL_POINT_CLOUD_EDITOR
+[1.888s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.10  
+[1.888s] -- looking for PCL_OUTOFCORE
+[1.889s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[1.889s] -- looking for PCL_PEOPLE
+[1.890s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[1.891s] -- Found PCL: pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_apps;pcl_outofcore;pcl_people;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_regex.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;/usr/lib/libOpenNI.so;/usr/lib/libOpenNI2.so;vtkChartsCore;vtkCommonColor;vtkCommonCore;vtksys;vtkCommonDataModel;vtkCommonMath;vtkCommonMisc;vtkCommonSystem;vtkCommonTransforms;vtkCommonExecutionModel;vtkFiltersGeneral;vtkCommonComputationalGeometry;vtkFiltersCore;vtkInfovisCore;vtkFiltersExtraction;vtkFiltersStatistics;vtkImagingFourier;vtkImagingCore;vtkalglib;vtkRenderingContext2D;vtkRenderingCore;vtkFiltersGeometry;vtkFiltersSources;vtkRenderingFreeType;/usr/lib/x86_64-linux-gnu/libfreetype.so;/usr/lib/x86_64-linux-gnu/libz.so;vtkFiltersModeling;vtkImagingSources;vtkInteractionStyle;vtkInteractionWidgets;vtkFiltersHybrid;vtkImagingColor;vtkImagingGeneral;vtkImagingHybrid;vtkIOImage;vtkDICOMParser;vtkmetaio;/usr/lib/x86_64-linux-gnu/libjpeg.so;/usr/lib/x86_64-linux-gnu/libpng.so;/usr/lib/x86_64-linux-gnu/libtiff.so;vtkRenderingAnnotation;vtkRenderingVolume;vtkIOXML;vtkIOCore;vtkIOXMLParser;/usr/lib/x86_64-linux-gnu/libexpat.so;vtkIOGeometry;vtkIOLegacy;vtkIOPLY;vtkRenderingLOD;vtkViewsContext2D;vtkViewsCore;vtkRenderingContextOpenGL2;vtkRenderingOpenGL2;FLANN::FLANN  
+[1.922s] -- Found Boost: /usr/include (found suitable version "1.71.0", minimum required is "1.65") found components: serialization system filesystem thread program_options date_time timer chrono regex atomic 
+[1.923s] -- GTSAM include directory:  /usr/lib/cmake/GTSAM/../../../include
+[1.928s] -- Found Eigen: /usr/include/eigen3  
+[1.928s] -- Eigen found (include: /usr/include/eigen3, version: 3.3.7)
+[2.085s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[2.140s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[2.140s] -- Found OpenMP: TRUE (found version "4.5")  
+[2.156s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[2.301s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[2.491s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.584s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.602s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[2.603s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[2.621s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[2.621s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.621s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[2.622s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[2.636s] -- Found PythonExtra: .so  
+[2.863s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.879s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.884s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.887s] -- Configured cppcheck include dirs: /home/ceu/Desktop/LIO-SAM/include/lio_sam;$<BUILD_INTERFACE:/home/ceu/Desktop/LIO-SAM/build/lio_sam/rosidl_generator_c>;/home/ceu/Desktop/LIO-SAM/build/lio_sam/rosidl_generator_c;/home/ceu/Desktop/LIO-SAM/build/lio_sam/rosidl_generator_cpp;/home/ceu/Desktop/LIO-SAM/build/lio_sam/rosidl_typesupport_fastrtps_c;/home/ceu/Desktop/LIO-SAM/build/lio_sam/rosidl_typesupport_fastrtps_cpp;$<BUILD_INTERFACE:/home/ceu/Desktop/LIO-SAM/build/lio_sam/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/ceu/Desktop/LIO-SAM/build/lio_sam/rosidl_typesupport_c>;$<BUILD_INTERFACE:/home/ceu/Desktop/LIO-SAM/build/lio_sam/rosidl_generator_cpp>;/home/ceu/Desktop/LIO-SAM/build/lio_sam/rosidl_generator_py
+[2.887s] -- Configured cppcheck exclude dirs and/or files: 
+[2.891s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.891s] -- Configured cpplint exclude dirs and/or files: 
+[2.892s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.894s] -- Added test 'lint_cmake' to check CMake code style
+[2.895s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.899s] -- Added test 'uncrustify' to check C / C++ code style
+[2.899s] -- Configured uncrustify additional arguments: 
+[2.900s] -- Added test 'xmllint' to check XML markup files
+[2.904s] -- Configuring done
+[3.077s] -- Generating done
+[3.080s] -- Build files have been written to: /home/ceu/Desktop/LIO-SAM/build/lio_sam
+[3.092s] Invoked command in '/home/ceu/Desktop/LIO-SAM/build/lio_sam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/ceu/Desktop/LIO-SAM -DCMAKE_INSTALL_PREFIX=/home/ceu/Desktop/LIO-SAM/install/lio_sam
+[3.092s] Invoking command in '/home/ceu/Desktop/LIO-SAM/build/lio_sam': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ceu/Desktop/LIO-SAM/build/lio_sam -- -j16 -l16
+[3.119s] [35m[1mScanning dependencies of target lio_sam__cpp[0m
+[3.119s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.126s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.367s] [35m[1mScanning dependencies of target lio_sam__rosidl_generator_c[0m
+[3.374s] [  4%] Built target lio_sam__cpp
+[3.380s] [  6%] [32mBuilding C object CMakeFiles/lio_sam__rosidl_generator_c.dir/rosidl_generator_c/lio_sam/srv/detail/save_map__functions.c.o[0m
+[3.380s] [  8%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.380s] [ 10%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.381s] [ 12%] [32mBuilding C object CMakeFiles/lio_sam__rosidl_generator_c.dir/rosidl_generator_c/lio_sam/msg/detail/cloud_info__functions.c.o[0m
+[3.384s] [ 14%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.537s] [ 17%] [32m[1mLinking C shared library liblio_sam__rosidl_generator_c.so[0m
+[3.571s] [ 17%] Built target lio_sam__rosidl_generator_c
+[3.578s] [ 19%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.581s] [ 21%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.608s] [35m[1mScanning dependencies of target lio_sam__rosidl_typesupport_cpp[0m
+[3.624s] [ 25%] [32mBuilding CXX object CMakeFiles/lio_sam__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/lio_sam/msg/cloud_info__type_support.cpp.o[0m
+[3.625s] [ 25%] [32mBuilding CXX object CMakeFiles/lio_sam__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/lio_sam/srv/save_map__type_support.cpp.o[0m
+[3.630s] [35m[1mScanning dependencies of target lio_sam__rosidl_typesupport_fastrtps_cpp[0m
+[3.641s] [35m[1mScanning dependencies of target lio_sam__rosidl_typesupport_introspection_cpp[0m
+[3.647s] [ 27%] [32mBuilding CXX object CMakeFiles/lio_sam__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/lio_sam/srv/detail/dds_fastrtps/save_map__type_support.cpp.o[0m
+[3.649s] [ 29%] [32mBuilding CXX object CMakeFiles/lio_sam__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/lio_sam/msg/detail/dds_fastrtps/cloud_info__type_support.cpp.o[0m
+[3.660s] [ 34%] [32mBuilding CXX object CMakeFiles/lio_sam__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/lio_sam/msg/detail/cloud_info__type_support.cpp.o[0m
+[3.660s] [ 34%] [32mBuilding CXX object CMakeFiles/lio_sam__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/lio_sam/srv/detail/save_map__type_support.cpp.o[0m
+[3.796s] [35m[1mScanning dependencies of target lio_sam__rosidl_typesupport_c[0m
+[3.807s] [ 36%] [32mBuilding CXX object CMakeFiles/lio_sam__rosidl_typesupport_c.dir/rosidl_typesupport_c/lio_sam/srv/save_map__type_support.cpp.o[0m
+[3.809s] [ 38%] [32mBuilding CXX object CMakeFiles/lio_sam__rosidl_typesupport_c.dir/rosidl_typesupport_c/lio_sam/msg/cloud_info__type_support.cpp.o[0m
+[3.845s] [ 40%] [32m[1mLinking CXX shared library liblio_sam__rosidl_typesupport_c.so[0m
+[3.860s] [35m[1mScanning dependencies of target lio_sam__rosidl_typesupport_introspection_c[0m
+[3.883s] [ 40%] Built target lio_sam__rosidl_typesupport_c
+[3.932s] [ 42%] [32mBuilding C object CMakeFiles/lio_sam__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/lio_sam/msg/detail/cloud_info__type_support.c.o[0m
+[3.932s] [ 44%] [32mBuilding C object CMakeFiles/lio_sam__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/lio_sam/srv/detail/save_map__type_support.c.o[0m
+[3.957s] [ 46%] [32m[1mLinking CXX shared library liblio_sam__rosidl_typesupport_cpp.so[0m
+[3.979s] [ 48%] [32m[1mLinking C shared library liblio_sam__rosidl_typesupport_introspection_c.so[0m
+[3.987s] [ 48%] Built target lio_sam__rosidl_typesupport_cpp
+[4.001s] [ 48%] Built target lio_sam__rosidl_typesupport_introspection_c
+[4.084s] [ 51%] [32m[1mLinking CXX shared library liblio_sam__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.166s] [ 51%] Built target lio_sam__rosidl_typesupport_fastrtps_cpp
+[4.169s] [ 53%] [32m[1mLinking CXX shared library liblio_sam__rosidl_typesupport_introspection_cpp.so[0m
+[4.174s] [ 55%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.217s] [ 55%] Built target lio_sam__rosidl_typesupport_introspection_cpp
+[4.406s] [35m[1mScanning dependencies of target lio_sam__rosidl_typesupport_fastrtps_c[0m
+[4.419s] [ 57%] [32mBuilding CXX object CMakeFiles/lio_sam__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/lio_sam/msg/detail/cloud_info__type_support_c.cpp.o[0m
+[4.419s] [ 59%] [32mBuilding CXX object CMakeFiles/lio_sam__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/lio_sam/srv/detail/save_map__type_support_c.cpp.o[0m
+[4.662s] [ 61%] [32m[1mLinking CXX shared library liblio_sam__rosidl_typesupport_fastrtps_c.so[0m
+[4.716s] [ 61%] Built target lio_sam__rosidl_typesupport_fastrtps_c
+[4.722s] [35m[1mScanning dependencies of target lio_sam[0m
+[4.728s] [ 61%] Built target lio_sam
+[4.734s] [35m[1mScanning dependencies of target lio_sam_mapOptimization[0m
+[4.734s] [35m[1mScanning dependencies of target lio_sam__py[0m
+[4.734s] [35m[1mScanning dependencies of target lio_sam_imuPreintegration[0m
+[4.738s] [35m[1mScanning dependencies of target lio_sam_featureExtraction[0m
+[4.738s] [35m[1mScanning dependencies of target lio_sam_imageProjection[0m
+[4.740s] [ 63%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.872s] [ 65%] [32mBuilding CXX object CMakeFiles/lio_sam_imuPreintegration.dir/src/imuPreintegration.cpp.o[0m
+[4.872s] [ 68%] [32mBuilding CXX object CMakeFiles/lio_sam_featureExtraction.dir/src/featureExtraction.cpp.o[0m
+[4.883s] [ 70%] [32mBuilding CXX object CMakeFiles/lio_sam_imageProjection.dir/src/imageProjection.cpp.o[0m
+[4.887s] [ 72%] [32mBuilding CXX object CMakeFiles/lio_sam_mapOptimization.dir/src/mapOptmization.cpp.o[0m
+[5.385s] [ 72%] Built target lio_sam__py
+[5.395s] [35m[1mScanning dependencies of target lio_sam__python[0m
+[5.418s] [ 76%] [32mBuilding C object CMakeFiles/lio_sam__python.dir/rosidl_generator_py/lio_sam/msg/_cloud_info_s.c.o[0m
+[5.418s] [ 76%] [32mBuilding C object CMakeFiles/lio_sam__python.dir/rosidl_generator_py/lio_sam/srv/_save_map_s.c.o[0m
+[5.685s] [ 78%] [32m[1mLinking C shared library rosidl_generator_py/lio_sam/liblio_sam__python.so[0m
+[5.717s] [ 78%] Built target lio_sam__python
+[5.724s] [35m[1mScanning dependencies of target lio_sam__rosidl_typesupport_c__pyext[0m
+[5.725s] [35m[1mScanning dependencies of target lio_sam__rosidl_typesupport_fastrtps_c__pyext[0m
+[5.728s] [35m[1mScanning dependencies of target lio_sam__rosidl_typesupport_introspection_c__pyext[0m
+[5.736s] [ 80%] [32mBuilding C object CMakeFiles/lio_sam__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/lio_sam/_lio_sam_s.ep.rosidl_typesupport_c.c.o[0m
+[5.740s] [ 82%] [32mBuilding C object CMakeFiles/lio_sam__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/lio_sam/_lio_sam_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.747s] [ 85%] [32mBuilding C object CMakeFiles/lio_sam__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/lio_sam/_lio_sam_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.829s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/lio_sam/lio_sam_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[5.832s] [ 89%] [32m[1mLinking CXX shared library rosidl_generator_py/lio_sam/lio_sam_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[5.857s] [ 89%] Built target lio_sam__rosidl_typesupport_c__pyext
+[5.865s] [ 91%] [32m[1mLinking C shared library rosidl_generator_py/lio_sam/lio_sam_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[5.894s] [ 91%] Built target lio_sam__rosidl_typesupport_introspection_c__pyext
+[5.906s] [ 91%] Built target lio_sam__rosidl_typesupport_fastrtps_c__pyext
+[10.132s] In file included from [01m[K/usr/include/boost/preprocessor/tuple/elem.hpp:23[m[K,
+[10.132s]                  from [01m[K/usr/include/boost/preprocessor/arithmetic/add.hpp:21[m[K,
+[10.132s]                  from [01m[K/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:66[m[K,
+[10.132s]                  from [01m[K/usr/include/boost/mpl/aux_/na_spec.hpp:28[m[K,
+[10.132s]                  from [01m[K/usr/include/boost/mpl/not.hpp:20[m[K,
+[10.132s]                  from [01m[K/usr/include/boost/mpl/assert.hpp:17[m[K,
+[10.132s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_traits.h:48[m[K,
+[10.132s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_cloud.h:50[m[K,
+[10.132s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:43[m[K,
+[10.132s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.132s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.132s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.132s] [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:14:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing uint16_t = uint16_t[m[K’ is deprecated: use std::uint16_t instead of pcl::uint16_t [[01;35m[K-Wdeprecated-declarations[m[K]
+[10.133s]    14 |     ([01;35m[Kuint16_t[m[K, ring, ring) (float, time, time)
+[10.133s]       |      [01;35m[K^~~~~~~~[m[K
+[10.133s] In file included from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:42[m[K,
+[10.133s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.133s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.133s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.133s] [01m[K/usr/include/pcl-1.10/pcl/pcl_macros.h:94:9:[m[K [01;36m[Knote: [m[Kdeclared here
+[10.133s]    94 |   using [01;36m[Kuint16_t[m[K [[deprecated("use std::uint16_t instead of pcl::uint16_t")]] = std::uint16_t;
+[10.133s]       |         [01;36m[K^~~~~~~~[m[K
+[10.136s] In file included from [01m[K/usr/include/boost/preprocessor/tuple/elem.hpp:23[m[K,
+[10.136s]                  from [01m[K/usr/include/boost/preprocessor/arithmetic/add.hpp:21[m[K,
+[10.137s]                  from [01m[K/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:66[m[K,
+[10.137s]                  from [01m[K/usr/include/boost/mpl/aux_/na_spec.hpp:28[m[K,
+[10.137s]                  from [01m[K/usr/include/boost/mpl/not.hpp:20[m[K,
+[10.137s]                  from [01m[K/usr/include/boost/mpl/assert.hpp:17[m[K,
+[10.137s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_traits.h:48[m[K,
+[10.137s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_cloud.h:50[m[K,
+[10.137s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:43[m[K,
+[10.137s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.137s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.138s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.138s] [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:29:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing uint32_t = uint32_t[m[K’ is deprecated: use std::uint32_t instead of pcl::uint32_t [[01;35m[K-Wdeprecated-declarations[m[K]
+[10.138s]    29 |     ([01;35m[Kuint32_t[m[K, t, t) (uint16_t, reflectivity, reflectivity)
+[10.138s]       |      [01;35m[K^~~~~~~~[m[K
+[10.138s] In file included from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:42[m[K,
+[10.138s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.138s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.138s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.138s] [01m[K/usr/include/pcl-1.10/pcl/pcl_macros.h:96:9:[m[K [01;36m[Knote: [m[Kdeclared here
+[10.138s]    96 |   using [01;36m[Kuint32_t[m[K [[deprecated("use std::uint32_t instead of pcl::uint32_t")]] = std::uint32_t;
+[10.138s]       |         [01;36m[K^~~~~~~~[m[K
+[10.138s] In file included from [01m[K/usr/include/boost/preprocessor/tuple/elem.hpp:23[m[K,
+[10.138s]                  from [01m[K/usr/include/boost/preprocessor/arithmetic/add.hpp:21[m[K,
+[10.138s]                  from [01m[K/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:66[m[K,
+[10.139s]                  from [01m[K/usr/include/boost/mpl/aux_/na_spec.hpp:28[m[K,
+[10.139s]                  from [01m[K/usr/include/boost/mpl/not.hpp:20[m[K,
+[10.139s]                  from [01m[K/usr/include/boost/mpl/assert.hpp:17[m[K,
+[10.139s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_traits.h:48[m[K,
+[10.139s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_cloud.h:50[m[K,
+[10.139s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:43[m[K,
+[10.139s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.139s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.139s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.139s] [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:29:23:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing uint16_t = uint16_t[m[K’ is deprecated: use std::uint16_t instead of pcl::uint16_t [[01;35m[K-Wdeprecated-declarations[m[K]
+[10.139s]    29 |     (uint32_t, t, t) ([01;35m[Kuint16_t[m[K, reflectivity, reflectivity)
+[10.139s]       |                       [01;35m[K^~~~~~~~[m[K
+[10.139s] In file included from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:42[m[K,
+[10.139s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.139s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.140s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.140s] [01m[K/usr/include/pcl-1.10/pcl/pcl_macros.h:94:9:[m[K [01;36m[Knote: [m[Kdeclared here
+[10.140s]    94 |   using [01;36m[Kuint16_t[m[K [[deprecated("use std::uint16_t instead of pcl::uint16_t")]] = std::uint16_t;
+[10.140s]       |         [01;36m[K^~~~~~~~[m[K
+[10.140s] In file included from [01m[K/usr/include/boost/preprocessor/tuple/elem.hpp:23[m[K,
+[10.140s]                  from [01m[K/usr/include/boost/preprocessor/arithmetic/add.hpp:21[m[K,
+[10.140s]                  from [01m[K/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:66[m[K,
+[10.140s]                  from [01m[K/usr/include/boost/mpl/aux_/na_spec.hpp:28[m[K,
+[10.140s]                  from [01m[K/usr/include/boost/mpl/not.hpp:20[m[K,
+[10.140s]                  from [01m[K/usr/include/boost/mpl/assert.hpp:17[m[K,
+[10.140s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_traits.h:48[m[K,
+[10.140s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_cloud.h:50[m[K,
+[10.140s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:43[m[K,
+[10.140s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.141s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.141s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.141s] [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:30:6:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing uint8_t = uint8_t[m[K’ is deprecated: use std::uint8_t instead of pcl::uint8_t [[01;35m[K-Wdeprecated-declarations[m[K]
+[10.141s]    30 |     ([01;35m[Kuint8_t[m[K, ring, ring) (uint16_t, noise, noise) (uint32_t, range, range)
+[10.141s]       |      [01;35m[K^~~~~~~[m[K
+[10.141s] In file included from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:42[m[K,
+[10.141s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.141s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.141s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.141s] [01m[K/usr/include/pcl-1.10/pcl/pcl_macros.h:92:9:[m[K [01;36m[Knote: [m[Kdeclared here
+[10.141s]    92 |   using [01;36m[Kuint8_t[m[K [[deprecated("use std::uint8_t instead of pcl::uint8_t")]] = std::uint8_t;
+[10.141s]       |         [01;36m[K^~~~~~~[m[K
+[10.141s] In file included from [01m[K/usr/include/boost/preprocessor/tuple/elem.hpp:23[m[K,
+[10.141s]                  from [01m[K/usr/include/boost/preprocessor/arithmetic/add.hpp:21[m[K,
+[10.141s]                  from [01m[K/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:66[m[K,
+[10.142s]                  from [01m[K/usr/include/boost/mpl/aux_/na_spec.hpp:28[m[K,
+[10.142s]                  from [01m[K/usr/include/boost/mpl/not.hpp:20[m[K,
+[10.142s]                  from [01m[K/usr/include/boost/mpl/assert.hpp:17[m[K,
+[10.142s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_traits.h:48[m[K,
+[10.142s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_cloud.h:50[m[K,
+[10.142s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:43[m[K,
+[10.142s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.142s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.142s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.142s] [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:30:28:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing uint16_t = uint16_t[m[K’ is deprecated: use std::uint16_t instead of pcl::uint16_t [[01;35m[K-Wdeprecated-declarations[m[K]
+[10.142s]    30 |     (uint8_t, ring, ring) ([01;35m[Kuint16_t[m[K, noise, noise) (uint32_t, range, range)
+[10.142s]       |                            [01;35m[K^~~~~~~~[m[K
+[10.142s] In file included from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:42[m[K,
+[10.142s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.143s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.143s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.143s] [01m[K/usr/include/pcl-1.10/pcl/pcl_macros.h:94:9:[m[K [01;36m[Knote: [m[Kdeclared here
+[10.143s]    94 |   using [01;36m[Kuint16_t[m[K [[deprecated("use std::uint16_t instead of pcl::uint16_t")]] = std::uint16_t;
+[10.143s]       |         [01;36m[K^~~~~~~~[m[K
+[10.143s] In file included from [01m[K/usr/include/boost/preprocessor/tuple/elem.hpp:23[m[K,
+[10.143s]                  from [01m[K/usr/include/boost/preprocessor/arithmetic/add.hpp:21[m[K,
+[10.143s]                  from [01m[K/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:66[m[K,
+[10.143s]                  from [01m[K/usr/include/boost/mpl/aux_/na_spec.hpp:28[m[K,
+[10.143s]                  from [01m[K/usr/include/boost/mpl/not.hpp:20[m[K,
+[10.143s]                  from [01m[K/usr/include/boost/mpl/assert.hpp:17[m[K,
+[10.143s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_traits.h:48[m[K,
+[10.143s]                  from [01m[K/usr/include/pcl-1.10/pcl/point_cloud.h:50[m[K,
+[10.143s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:43[m[K,
+[10.143s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.144s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.144s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.144s] [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:30:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing uint32_t = uint32_t[m[K’ is deprecated: use std::uint32_t instead of pcl::uint32_t [[01;35m[K-Wdeprecated-declarations[m[K]
+[10.144s]    30 |     (uint8_t, ring, ring) (uint16_t, noise, noise) ([01;35m[Kuint32_t[m[K, range, range)
+[10.144s]       |                                                     [01;35m[K^~~~~~~~[m[K
+[10.144s] In file included from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:42[m[K,
+[10.144s]                  from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+[10.144s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/include/lio_sam/utility.hpp:21[m[K,
+[10.144s]                  from [01m[K/home/ceu/Desktop/LIO-SAM/src/imageProjection.cpp:1[m[K:
+[10.144s] [01m[K/usr/include/pcl-1.10/pcl/pcl_macros.h:96:9:[m[K [01;36m[Knote: [m[Kdeclared here
+[10.144s]    96 |   using [01;36m[Kuint32_t[m[K [[deprecated("use std::uint32_t instead of pcl::uint32_t")]] = std::uint32_t;
+[10.144s]       |         [01;36m[K^~~~~~~~[m[K
+[23.310s] [ 93%] [32m[1mLinking CXX executable lio_sam_featureExtraction[0m
+[24.300s] [ 93%] Built target lio_sam_featureExtraction
+[26.241s] [ 95%] [32m[1mLinking CXX executable lio_sam_imageProjection[0m
+[26.582s] [ 95%] Built target lio_sam_imageProjection
+[33.398s] [ 97%] [32m[1mLinking CXX executable lio_sam_imuPreintegration[0m
+[34.242s] [ 97%] Built target lio_sam_imuPreintegration
+[44.352s] [100%] [32m[1mLinking CXX executable lio_sam_mapOptimization[0m
+[44.850s] [100%] Built target lio_sam_mapOptimization
+[44.859s] Invoked command in '/home/ceu/Desktop/LIO-SAM/build/lio_sam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ceu/Desktop/LIO-SAM/build/lio_sam -- -j16 -l16
+[44.901s] Invoking command in '/home/ceu/Desktop/LIO-SAM/build/lio_sam': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ceu/Desktop/LIO-SAM/build/lio_sam
+[44.906s] -- Install configuration: "Release"
+[44.906s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/ament_index/resource_index/rosidl_interfaces/lio_sam
+[44.906s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__functions.c
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__struct.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__type_support.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__functions.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/cloud_info.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/rosidl_generator_c__visibility_control.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__struct.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__functions.c
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__functions.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__type_support.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/save_map.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/environment/library_path.sh
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/environment/library_path.dsv
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_generator_c.so
+[44.907s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_generator_c.so" to ""
+[44.907s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam
+[44.907s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg
+[44.907s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__rosidl_typesupport_fastrtps_c.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[44.907s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv
+[44.907s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__rosidl_typesupport_fastrtps_c.h
+[44.907s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_fastrtps_c.so
+[44.907s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_fastrtps_c.so" to ""
+[44.907s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/dds_fastrtps
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__rosidl_typesupport_fastrtps_cpp.hpp
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/dds_fastrtps
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__rosidl_typesupport_fastrtps_cpp.hpp
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_fastrtps_cpp.so
+[44.908s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_fastrtps_cpp.so" to ""
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__type_support.c
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__rosidl_typesupport_introspection_c.h
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__rosidl_typesupport_introspection_c.h
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__type_support.c
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_introspection_c.so
+[44.908s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_introspection_c.so" to ""
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_c.so
+[44.908s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_c.so" to ""
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg
+[44.908s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/cloud_info.hpp
+[44.908s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__struct.hpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__builder.hpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__type_support.hpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__traits.hpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/rosidl_generator_cpp__visibility_control.hpp
+[44.909s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv
+[44.909s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__builder.hpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__struct.hpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__type_support.hpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__traits.hpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/save_map.hpp
+[44.909s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam
+[44.909s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg
+[44.909s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__rosidl_typesupport_introspection_cpp.hpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/msg/detail/cloud_info__type_support.cpp
+[44.909s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv
+[44.909s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__rosidl_typesupport_introspection_cpp.hpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/srv/detail/save_map__type_support.cpp
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_introspection_cpp.so
+[44.909s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_introspection_cpp.so" to ""
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_cpp.so
+[44.909s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__rosidl_typesupport_cpp.so" to ""
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/environment/pythonpath.sh
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/environment/pythonpath.dsv
+[44.909s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/__init__.py
+[44.932s] Compiling '/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/__init__.py'...
+[44.934s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/msg
+[44.934s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/msg/__init__.py
+[44.934s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/msg/_cloud_info.py
+[44.934s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/msg/_cloud_info_s.c
+[44.934s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/srv
+[44.934s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/srv/__init__.py
+[44.934s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/srv/_save_map.py
+[44.934s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/srv/_save_map_s.c
+[44.934s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/lio_sam_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[44.935s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/lio_sam_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[44.935s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/lio_sam_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[44.935s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/lio_sam_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[44.935s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/lio_sam_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[44.935s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/python3.8/site-packages/lio_sam/lio_sam_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[44.935s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__python.so
+[44.935s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/liblio_sam__python.so" to ""
+[44.935s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/msg/CloudInfo.idl
+[44.935s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/srv/SaveMap.idl
+[44.935s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/msg/CloudInfo.msg
+[44.936s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/srv/SaveMap.srv
+[44.936s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/srv/SaveMap_Request.msg
+[44.936s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/srv/SaveMap_Response.msg
+[44.936s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//launch
+[44.936s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//launch/run.launch.py
+[44.937s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config
+[44.937s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc
+[44.937s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/gps-demo.gif
+[44.944s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/system.png
+[44.944s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/paper.pdf
+[44.948s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/loop-closure-2.gif
+[44.960s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/kitti-map.png
+[44.960s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/device-boat.png
+[44.961s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/demo.gif
+[44.968s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/kitti-demo.gif
+[44.977s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/device-jackal.png
+[44.978s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/device-hand-2.png
+[44.978s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/device-hand.png
+[44.978s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/ouster-device.jpg
+[44.979s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/ouster-demo.gif
+[44.987s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/kitti2bag
+[44.987s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/kitti2bag/kitti2bag.py
+[44.987s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/kitti2bag/README.md
+[44.987s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/imu-transform.png
+[44.988s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/loop-closure.gif
+[44.998s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/doc/imu-debug.gif
+[45.001s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/params.yaml
+[45.001s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/robot.urdf.xacro
+[45.001s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam//config/rviz2.rviz
+[45.001s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/lio_sam/lio_sam_imageProjection
+[45.002s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/lio_sam/lio_sam_imageProjection" to ""
+[45.002s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/lio_sam/lio_sam_imuPreintegration
+[45.003s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/lio_sam/lio_sam_imuPreintegration" to ""
+[45.003s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/lio_sam/lio_sam_featureExtraction
+[45.003s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/lio_sam/lio_sam_featureExtraction" to ""
+[45.003s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/lio_sam/lio_sam_mapOptimization
+[45.004s] -- Set runtime path of "/home/ceu/Desktop/LIO-SAM/install/lio_sam/lib/lio_sam/lio_sam_mapOptimization" to ""
+[45.004s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include
+[45.004s] -- Up-to-date: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam
+[45.004s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/include/lio_sam/utility.hpp
+[45.004s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/ament_index/resource_index/package_run_dependencies/lio_sam
+[45.004s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/ament_index/resource_index/parent_prefix_path/lio_sam
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/environment/ament_prefix_path.sh
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/environment/ament_prefix_path.dsv
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/environment/path.sh
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/environment/path.dsv
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/local_setup.bash
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/local_setup.sh
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/local_setup.zsh
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/local_setup.dsv
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/package.dsv
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/ament_index/resource_index/packages/lio_sam
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_generator_cExport.cmake
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_generator_cExport-release.cmake
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_introspection_cExport.cmake
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_introspection_cExport-release.cmake
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_cExport.cmake
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_cExport-release.cmake
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_generator_cppExport.cmake
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_introspection_cppExport.cmake
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_introspection_cppExport-release.cmake
+[45.005s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_cppExport.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_sam__rosidl_typesupport_cppExport-release.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/rosidl_cmake-extras.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/ament_cmake_export_dependencies-extras.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/ament_cmake_export_libraries-extras.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/ament_cmake_export_targets-extras.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/ament_cmake_export_include_directories-extras.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_samConfig.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/cmake/lio_samConfig-version.cmake
+[45.006s] -- Installing: /home/ceu/Desktop/LIO-SAM/install/lio_sam/share/lio_sam/package.xml
+[45.008s] Invoked command in '/home/ceu/Desktop/LIO-SAM/build/lio_sam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ceu/Desktop/LIO-SAM/build/lio_sam
