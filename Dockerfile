@@ -1,4 +1,4 @@
-FROM osrf/ros:humble-desktop-full-jammy
+FROM amd64/ros:humble-perception-jammy
 
 RUN apt-get update \
     && apt-get install -y curl \
