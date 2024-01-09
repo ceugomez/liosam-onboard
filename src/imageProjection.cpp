@@ -191,9 +191,9 @@ public:
               ", y: " << thisImu.angular_velocity.y <<
               ", z: " << thisImu.angular_velocity.z << endl;
         double imuRoll, imuPitch, imuYaw;
-        tf::Quaternion orientation;
-        tf::quaternionMsgToTF(thisImu.orientation, orientation);
-        tf::Matrix3x3(orientation).getRPY(imuRoll, imuPitch, imuYaw);
+        tf2::Quaternion orientation;
+        tf2::quaternionMsgToTF(thisImu.orientation, orientation);
+        tf2::Matrix3x3(orientation).getRPY(imuRoll, imuPitch, imuYaw);
         cout << "IMU roll pitch yaw: " << endl;
         cout << "roll: " << imuRoll << ", pitch: " << imuPitch << ", yaw: " << imuYaw << endl << endl;
     }
@@ -235,7 +235,7 @@ public:
         cloudQueue.pop_front();
         if (sensor == SensorType::VELODYNE || sensor == SensorType::LIVOX)
         {
-            pcl::moveFromROSMsg(currentCloudMsg, *laserCloudIn);  
+            pcl::moveFromROSMsg(currentCloudMsg, *laserCloudIn);
         }
         else if (sensor == SensorType::OUSTER)
         {
@@ -397,6 +397,7 @@ public:
             return;
 
         cloudInfo.imu_available = true;
+        RCLCPP_INFO(get_logger(), "IMU deskew info ran to completion...");
     }
 
     void odomDeskewInfo()
@@ -479,6 +480,7 @@ public:
         pcl::getTranslationAndEulerAngles(transBt, odomIncreX, odomIncreY, odomIncreZ, rollIncre, pitchIncre, yawIncre);
 
         odomDeskewFlag = true;
+        RCLCPP_INFO(get_logger(), "ODOM deskew info ran to completion...");
     }
 
     void findRotation(double pointTime, float *rotXCur, float *rotYCur, float *rotZCur)
