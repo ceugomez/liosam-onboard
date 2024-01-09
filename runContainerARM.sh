@@ -1,6 +1,8 @@
 #!/bin/bash
 docker run --init -it -d \
-  --name liosam-onboard-container-arm\
+  --name liosam-onboard-container\
   -v /home/root/MapOutput:/LOAM/ \
-  liosam-onboard-image-arm \
+  --network=host \
+  liosam-onboard-image \
   bash
+
