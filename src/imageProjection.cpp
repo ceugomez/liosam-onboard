@@ -175,6 +175,7 @@ public:
 
     void imuHandler(const sensor_msgs::msg::Imu::SharedPtr imuMsg)
     {
+        RCLCPP_INFO(get_logger(), "imuHandler callback triggered...");
         sensor_msgs::msg::Imu thisImu = imuConverter(*imuMsg);
 
         std::lock_guard<std::mutex> lock1(imuLock);
@@ -333,9 +334,9 @@ public:
             RCLCPP_INFO(get_logger(), "Waiting for IMU data ...");
             return false;
         }
-
+        RCLCPP_INFO(get_logger(), "Starting imuDeskewInfo...");
         imuDeskewInfo();
-
+        RCLCPP_INFO(get_logger(), "Finished imuDeskewInfo - moving onto Odom Deskew...");
         odomDeskewInfo();
 
         return true;
@@ -354,6 +355,7 @@ public:
         }
 
         if (imuQueue.empty())
+            RCLCPP_INFO(get_logger(), "IMU queue empty");
             return;
 
         imuPointerCur = 0;
