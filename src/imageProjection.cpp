@@ -192,7 +192,7 @@ public:
               ", z: " << thisImu.angular_velocity.z << endl;
         double imuRoll, imuPitch, imuYaw;
         tf2::Quaternion orientation;
-        tf2::quaternionMsgToTF(thisImu.orientation, orientation);
+        tf2::fromMsg(thisImu.orientation, orientation);
         tf2::Matrix3x3(orientation).getRPY(imuRoll, imuPitch, imuYaw);
         cout << "IMU roll pitch yaw: " << endl;
         cout << "roll: " << imuRoll << ", pitch: " << imuPitch << ", yaw: " << imuYaw << endl << endl;
