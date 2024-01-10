@@ -54,6 +54,13 @@ ament_target_dependencies(${PROJECT_NAME}_mapOptimization rclcpp rclpy std_msgs 
 target_link_libraries(${PROJECT_NAME}_mapOptimization gtsam)
 rosidl_target_interfaces(${PROJECT_NAME}_mapOptimization ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
+add_executable(imu_debug src/imuSubscriberDebugNode.cpp)
+ament_target_dependencies(imu_debug rclcpp std_msgs sensor_msgs)
+
+install(TARGETS
+  imu_debug
+  DESTINATION lib/${PROJECT_NAME}/
+)
 
 install(
   DIRECTORY launch
