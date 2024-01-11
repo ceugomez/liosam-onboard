@@ -92,7 +92,7 @@ public:
     string savePCDDirectory;
 
     // Lidar Sensor Configuration
-    SensorType sensor = SensorType::OUSTER;
+    SensorType sensor = SensorType::VELODYNE;
     int N_SCAN;
     int Horizon_SCAN;
     int downsampleRate;
@@ -187,7 +187,7 @@ public:
         get_parameter("savePCDDirectory", savePCDDirectory);
 
         std::string sensorStr;
-        declare_parameter("sensor", "ouster");
+        declare_parameter("sensor", "velodyne");
         get_parameter("sensor", sensorStr);
         if (sensorStr == "velodyne")
         {
@@ -209,15 +209,15 @@ public:
             rclcpp::shutdown();
         }
 
-        declare_parameter("N_SCAN", 64);
+        declare_parameter("N_SCAN", 1);
         get_parameter("N_SCAN", N_SCAN);
-        declare_parameter("Horizon_SCAN", 512);
+        declare_parameter("Horizon_SCAN", 1500);
         get_parameter("Horizon_SCAN", Horizon_SCAN);
         declare_parameter("downsampleRate", 1);
         get_parameter("downsampleRate", downsampleRate);
-        declare_parameter("lidarMinRange", 5.5);
+        declare_parameter("lidarMinRange", 0.01);
         get_parameter("lidarMinRange", lidarMinRange);
-        declare_parameter("lidarMaxRange", 1000.0);
+        declare_parameter("lidarMaxRange", 45.0);
         get_parameter("lidarMaxRange", lidarMaxRange);
 
         declare_parameter("imuAccNoise", 9e-4);

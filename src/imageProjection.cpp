@@ -6,6 +6,7 @@ struct VelodynePointXYZIRT
     PCL_ADD_POINT4D
     PCL_ADD_INTENSITY;
     uint16_t ring;
+    //float ring;
     float time;
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 } EIGEN_ALIGN16;
@@ -130,6 +131,8 @@ public:
         allocateMemory();
         resetParameters();
 
+        // Changed from L_ERROR
+        //pcl::console::setVerbosityLevel(pcl::console::L_VERBOSE);
         pcl::console::setVerbosityLevel(pcl::console::L_ERROR);
     }
 
@@ -175,28 +178,28 @@ public:
 
     void imuHandler(const sensor_msgs::msg::Imu::SharedPtr imuMsg)
     {
-        RCLCPP_INFO(get_logger(), "imuHandler callback triggered...");
+        //RCLCPP_INFO(get_logger(), "imuHandler callback triggered...");
         sensor_msgs::msg::Imu thisImu = imuConverter(*imuMsg);
 
         std::lock_guard<std::mutex> lock1(imuLock);
         imuQueue.push_back(thisImu);
 
         // debug IMU data
-        cout << std::setprecision(6);
-        cout << "IMU acc: " << endl;
-        cout << "x: " << thisImu.linear_acceleration.x <<
-              ", y: " << thisImu.linear_acceleration.y << 
-              ", z: " << thisImu.linear_acceleration.z << endl;
-        cout << "IMU gyro: " << endl;
-        cout << "x: " << thisImu.angular_velocity.x <<
-              ", y: " << thisImu.angular_velocity.y <<
-              ", z: " << thisImu.angular_velocity.z << endl;
+        //cout << std::setprecision(6);
+        //cout << "IMU acc: " << endl;
+        //cout << "x: " << thisImu.linear_acceleration.x <<
+        //      ", y: " << thisImu.linear_acceleration.y << 
+        //      ", z: " << thisImu.linear_acceleration.z << endl;
+        //cout << "IMU gyro: " << endl;
+        //cout << "x: " << thisImu.angular_velocity.x <<
+        //      ", y: " << thisImu.angular_velocity.y <<
+        //      ", z: " << thisImu.angular_velocity.z << endl;
         double imuRoll, imuPitch, imuYaw;
         tf2::Quaternion orientation;
         tf2::fromMsg(thisImu.orientation, orientation);
         tf2::Matrix3x3(orientation).getRPY(imuRoll, imuPitch, imuYaw);
-        cout << "IMU roll pitch yaw: " << endl;
-        cout << "roll: " << imuRoll << ", pitch: " << imuPitch << ", yaw: " << imuYaw << endl << endl;
+        //cout << "IMU roll pitch yaw: " << endl;
+        //cout << "roll: " << imuRoll << ", pitch: " << imuPitch << ", yaw: " << imuYaw << endl << endl;
     }
 
     void odometryHandler(const nav_msgs::msg::Odometry::SharedPtr odometryMsg)
@@ -207,20 +210,27 @@ public:
 
     void cloudHandler(const sensor_msgs::msg::PointCloud2::SharedPtr laserCloudMsg)
     {
-        if (!cachePointCloud(laserCloudMsg))
+        //std::cout << "started cloud handler" << std::endl;
+        /*if (!cachePointCloud(laserCloudMsg))
             RCLCPP_ERROR_STREAM(get_logger(), "Failed to cache the point cloud data.");
+            //std::cout << "point cloud caching error" << std::endl;
             return;
-
+        std::cout << "cached cloud" << std::endl;
         if (!deskewInfo())
             RCLCPP_ERROR_STREAM(get_logger(), "Failed to deskew info.");
             return;
-
+        
+        */
+        //std::cout << "caching point cloud" <<std::endl;
+        cachePointCloud(laserCloudMsg);
+        //std::cout << "deskewInfo" << std::endl;
+        deskewInfo();
+        //std::cout << "projecting cloud" << std::endl;
         projectPointCloud();
-
+        //std::cout << "extracting cloud" << std::endl;
         cloudExtraction();
-
+        
         publishClouds();
-
         resetParameters();
     }
 
@@ -234,26 +244,17 @@ public:
         // convert cloud
         currentCloudMsg = std::move(cloudQueue.front());
         cloudQueue.pop_front();
+        if (sensor== SensorType::VELODYNE){
+            //std::cout << "velodyne" << std::endl;
+        }
         if (sensor == SensorType::VELODYNE || sensor == SensorType::LIVOX)
         {
-            pcl::moveFromROSMsg(currentCloudMsg, *laserCloudIn);
-        }
-        else if (sensor == SensorType::OUSTER)
-        {
-            // Convert to Velodyne format
-            pcl::moveFromROSMsg(currentCloudMsg, *tmpOusterCloudIn);
-            laserCloudIn->points.resize(tmpOusterCloudIn->size());
-            laserCloudIn->is_dense = tmpOusterCloudIn->is_dense;
-            for (size_t i = 0; i < tmpOusterCloudIn->size(); i++)
-            {
-                auto &src = tmpOusterCloudIn->points[i];
-                auto &dst = laserCloudIn->points[i];
-                dst.x = src.x;
-                dst.y = src.y;
-                dst.z = src.z;
-                dst.intensity = src.intensity;
-                dst.ring = src.ring;
-                dst.time = src.t * 1e-9f;
+            try{
+                pcl::moveFromROSMsg(currentCloudMsg, *laserCloudIn);
+            }
+            catch(...){
+                RCLCPP_ERROR(get_logger(),"Exception caught during point cloud conversion:");
+                // Handle the exception or fail gracefully
             }
         }
         else
@@ -264,13 +265,14 @@ public:
 
         // get timestamp
         cloudHeader = currentCloudMsg.header;
+
         timeScanCur = stamp2Sec(cloudHeader.stamp);
         timeScanEnd = timeScanCur + laserCloudIn->points.back().time;
-    
+            //std::cout << timeScanCur/1e9 << std::endl;
+
         // remove Nan
         vector<int> indices;
         pcl::removeNaNFromPointCloud(*laserCloudIn, *laserCloudIn, indices);
-
         // check dense flag
         if (laserCloudIn->is_dense == false)
         {
@@ -317,12 +319,14 @@ public:
             if (deskewFlag == -1)
                 RCLCPP_WARN(get_logger(), "Point cloud timestamp not available, deskew function disabled, system will drift significantly!");
         }
-
+        //std::cout << "end of point cloud caching" << std::endl;
         return true;
     }
 
     bool deskewInfo()
     {
+        //std::cout << "starting Deskew" << std::endl;
+        RCLCPP_INFO(get_logger(), "starting deskewInfo...");
         std::lock_guard<std::mutex> lock1(imuLock);
         std::lock_guard<std::mutex> lock2(odoLock);
 
@@ -338,7 +342,6 @@ public:
         imuDeskewInfo();
         RCLCPP_INFO(get_logger(), "Finished imuDeskewInfo - moving onto Odom Deskew...");
         odomDeskewInfo();
-
         return true;
     }
 
@@ -571,7 +574,9 @@ public:
             thisPoint.y = laserCloudIn->points[i].y;
             thisPoint.z = laserCloudIn->points[i].z;
             thisPoint.intensity = laserCloudIn->points[i].intensity;
-
+            //std::cout << thisPoint.x << std::endl; 
+            //std::cout << thisPoint.intensity << std::endl; 
+            
             float range = pointDistance(thisPoint);
             if (range < lidarMinRange || range > lidarMaxRange)
                 continue;
