@@ -273,6 +273,15 @@ public:
         // remove Nan
         vector<int> indices;
         pcl::removeNaNFromPointCloud(*laserCloudIn, *laserCloudIn, indices);
+
+        // Check if the point cloud is empty
+        if (laserCloudIn->empty() || laserCloudIn->size() == 0) {
+            RCLCPP_ERROR(get_logger(), "The point cloud is empty after removing NaN points.");
+        } else {
+            std::cout << "The point cloud has " << laserCloudIn->size() << " points." << std::endl;
+            // Continue with processing as the point cloud is not empty
+        }
+
         // check dense flag
         if (laserCloudIn->is_dense == false)
         {
