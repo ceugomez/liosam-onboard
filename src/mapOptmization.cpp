@@ -621,9 +621,14 @@ public:
         // find the closest history key frame
         std::vector<int> pointSearchIndLoop;
         std::vector<float> pointSearchSqDisLoop;
-        kdtreeHistoryKeyPoses->setInputCloud(copy_cloudKeyPoses3D);
-        kdtreeHistoryKeyPoses->radiusSearch(copy_cloudKeyPoses3D->back(), historyKeyframeSearchRadius, pointSearchIndLoop, pointSearchSqDisLoop, 0);
-        
+        try {
+            kdtreeHistoryKeyPoses->setInputCloud(copy_cloudKeyPoses3D);
+            kdtreeHistoryKeyPoses->radiusSearch(copy_cloudKeyPoses3D->back(), historyKeyframeSearchRadius, pointSearchIndLoop, pointSearchSqDisLoop, 0);
+        } catch (...) {
+            RCLCPP_WARN(get_logger(), "Error working with kdtreeHistoryKeyPoses. Returning false from detectLoopClosureDistance...");
+            return false;
+        }
+
         for (int i = 0; i < (int)pointSearchIndLoop.size(); ++i)
         {
             int id = pointSearchIndLoop[i];
@@ -1289,8 +1294,19 @@ public:
 
         if (laserCloudCornerLastDSNum > edgeFeatureMinValidNum && laserCloudSurfLastDSNum > surfFeatureMinValidNum)
         {
-            kdtreeCornerFromMap->setInputCloud(laserCloudCornerFromMapDS);
-            kdtreeSurfFromMap->setInputCloud(laserCloudSurfFromMapDS);
+            try {
+                kdtreeCornerFromMap->setInputCloud(laserCloudCornerFromMapDS);
+            } catch (...) {
+                RCLCPP_WARN(get_logger(), "Could not set input cloud for kdtreeCornerFromMap variable. Returning early...");
+                return;
+            }
+
+            try {
+                kdtreeSurfFromMap->setInputCloud(laserCloudSurfFromMapDS);
+            } catch (...) {
+                RCLCPP_WARN(get_logger(), "Could not set input cloud for kdtreeSurfFromMap variable. Returning early...");
+                return;
+            }
 
             for (int iterCount = 0; iterCount < 30; iterCount++)
             {
