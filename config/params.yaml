@@ -66,7 +66,7 @@
 
     # CPU Params
     numberOfCores: 3                              # number of cores for mapping optimization
-    mappingProcessInterval: 4                     # seconds, regulate mapping frequency
+    mappingProcessInterval: 4.0                     # seconds, regulate mapping frequency
 
     # Surrounding map
     surroundingkeyframeAddingDistThreshold: 1.0   # meters, regulate keyframe adding threshold
@@ -77,7 +77,7 @@
 
     # Loop closure
     loopClosureEnableFlag: true
-    loopClosureFrequency: 5.0                     # Hz, regulate loop closure constraint add frequency
+    loopClosureFrequency: 8.0                     # Hz, regulate loop closure constraint add frequency
     surroundingKeyframeSize: 50                   # submap size (when loop closure enabled)
     historyKeyframeSearchRadius: 15.0             # meters, key frame that is within n meters from
     # current pose will be considerd for loop closure
