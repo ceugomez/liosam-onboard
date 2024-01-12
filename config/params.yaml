@@ -21,16 +21,16 @@
 
     # Export settings
     savePCD: false                               # https://github.com/TixiaoShan/LIO-SAM/issues/3
-    savePCDDirectory: "/LOAM/"                   # in your home folder, starts and ends with "/". Warning: the code deletes "LOAM" folder then recreates it. See "mapOptimization" for implementation
+    savePCDDirectory: "/Downloads/LOAM/"         # in your home folder, starts and ends with "/". Warning: the code deletes "LOAM" folder then recreates it. See "mapOptimization" for implementation
 
     # Sensor Settings
-    sensor: 'velodyne'                             # lidar sensor type, either 'velodyne', 'ouster' or 'livox'
+    sensor: 'velodyne'                               # lidar sensor type, either 'velodyne', 'ouster' or 'livox'
     N_SCAN: 1                                    # number of lidar channels (i.e., Velodyne/Ouster: 16, 32, 64, 128, Livox Horizon: 6)
-    Horizon_SCAN: 1450                           # lidar horizontal resolution (Velodyne:1800, Ouster:512,1024,2048, Livox Horizon: 4000)
-    downsampleRate: 10                            # default: 1. Downsample your data if too many
+    Horizon_SCAN: 6500                            # lidar horizontal resolution (Velodyne:1800, Ouster:512,1024,2048, Livox Horizon: 4000)
+    downsampleRate: 1                            # default: 1. Downsample your data if too many
     # points. i.e., 16 = 64 / 4, 16 = 16 / 1
-    lidarMinRange: 0.1                             # default: 1.0, minimum lidar range to be used
-    lidarMaxRange: 45.0                            # default: 1000.0, maximum lidar range to be used
+    lidarMinRange: 0.2                           # default: 1.0, minimum lidar range to be used
+    lidarMaxRange: 45.0                        # default: 1000.0, maximum lidar range to be used
 
     # IMU Settings
     imuAccNoise: 3.9939570888238808e-03
@@ -43,11 +43,11 @@
 
     extrinsicTrans:  [ 0.0,  0.0,  0.0 ]
     extrinsicRot:    [1.0,  0.0,  0.0,
-                       0.0,  1.0,  0.0,
-                       0.0,  0.0, 1.0 ]
-    extrinsicRPY:     [1.0,  0.0,  0.0,
-                       0.0,  1.0,  0.0,
-                       0.0,  0.0, 1.0 ]
+                      0.0,  1.0,  0.0,
+                      0.0,  0.0, 1.0 ]
+    extrinsicRPY: [ 1.0,  0.0,  0.0,
+                    0.0,  1.0,  0.0,
+                    0.0,  0.0,  1.0 ]
 
     # LOAM feature threshold
     edgeThreshold: 1.0
@@ -65,8 +65,8 @@
     rotation_tollerance: 1000.0                   # radians
 
     # CPU Params
-    numberOfCores: 3                              # number of cores for mapping optimization
-    mappingProcessInterval: 4.0                     # seconds, regulate mapping frequency
+    numberOfCores: 4                              # number of cores for mapping optimization
+    mappingProcessInterval: 0.15                  # seconds, regulate mapping frequency
 
     # Surrounding map
     surroundingkeyframeAddingDistThreshold: 1.0   # meters, regulate keyframe adding threshold
@@ -77,7 +77,7 @@
 
     # Loop closure
     loopClosureEnableFlag: true
-    loopClosureFrequency: 8.0                     # Hz, regulate loop closure constraint add frequency
+    loopClosureFrequsoency: 1.0                     # Hz, regulate loop closure constraint add frequency
     surroundingKeyframeSize: 50                   # submap size (when loop closure enabled)
     historyKeyframeSearchRadius: 15.0             # meters, key frame that is within n meters from
     # current pose will be considerd for loop closure
