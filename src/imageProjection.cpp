@@ -134,6 +134,8 @@ public:
         // Changed from L_ERROR
         //pcl::console::setVerbosityLevel(pcl::console::L_VERBOSE);
         pcl::console::setVerbosityLevel(pcl::console::L_ERROR);
+
+        RCLCPP_INFO(get_logger(), "N_SCAN %d Horizon_SCAN %d", N_SCAN, Horizon_SCAN);
     }
 
     void allocateMemory()
